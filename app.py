@@ -12,13 +12,12 @@ app.secret_key = 'Super secret key'
 
 def processImage(filename, operation):
     img = cv2.imread(f"uploads/{filename}")
-    match operation:
-        case 'cgray':
+    if operation == 'cray':
             imgProcessed = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             cv2.imwrite(f"static/{filename}", imgProcessed)
             return filename
-        case _:
-            print("You do not have any access to the code")
+    else:
+        print("You do not have any access to the code")
 
 def allowed_file(filename):
     return '.' in filename and \
