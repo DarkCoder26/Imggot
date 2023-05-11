@@ -12,7 +12,7 @@ app.secret_key = 'Super secret key'
 
 def processImage(filename, operation):
     img = cv2.imread(f"uploads/{filename}")
-    if operation == 'cray':
+    if operation == 'cgray':
             imgProcessed = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             cv2.imwrite(f"static/{filename}", imgProcessed)
             return filename
