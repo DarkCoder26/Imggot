@@ -17,7 +17,7 @@ def processImage(filename, operation):
             cv2.imwrite(f"static/{filename}", imgProcessed)
             return filename
     else:
-        print("You do not have any access to the code")
+        print("Wrong ,error!!!!")
 
 def allowed_file(filename):
     return '.' in filename and \
